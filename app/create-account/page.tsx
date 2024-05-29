@@ -5,10 +5,10 @@ import { useEffect, useState } from "react";
 import { useFormState } from "react-dom";
 import Button from "../components/button";
 import Input from "../components/input";
-import { login } from "./actions";
+import { createAccount } from "./actions";
 
-export default function Login() {
-  const [state, dispatch] = useFormState(login, null);
+export default function CreateAccount() {
+  const [state, dispatch] = useFormState(createAccount, null);
   const [password, setPassword] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -52,7 +52,7 @@ export default function Login() {
           minLength={PASSWORD_MIN_LENGTH}
           errors={state?.fieldErrors.password}
         />
-        <Button text="Log in" />
+        <Button text="Join" />
       </form>
       {isSuccess ? (
         <div className="h-10 bg-green-500 font-bold rounded-2xl flex items-center p-5">

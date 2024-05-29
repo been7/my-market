@@ -13,7 +13,6 @@ async function test() {
       updated_at: "111",
     },
   });
-  console.log(user);
 }
 
 test();
