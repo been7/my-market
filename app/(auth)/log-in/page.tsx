@@ -2,8 +2,8 @@
 
 import { PASSWORD_MIN_LENGTH } from "@/lib/constants";
 import { useFormState } from "react-dom";
-import Button from "../components/button";
-import Input from "../components/input";
+import Button from "../../components/button";
+import Input from "../../components/input";
 import { login } from "./actions";
 
 export default function Login() {

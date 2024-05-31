@@ -1,10 +1,11 @@
 "use client";
 import { PASSWORD_MIN_LENGTH, USERNAME_MIN_LENGTH } from "@/lib/constants";
 import { CheckBadgeIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useFormState } from "react-dom";
-import Button from "../components/button";
-import Input from "../components/input";
+import Button from "../../components/button";
+import Input from "../../components/input";
 import { createAccount } from "./actions";
 
 export default function CreateAccount() {
@@ -53,6 +54,9 @@ export default function CreateAccount() {
           errors={state?.fieldErrors.password}
         />
         <Button text="Join" />
+        <Link href="/log-in">
+          <Button text="Login" />
+        </Link>
       </form>
       {isSuccess ? (
         <div className="h-10 bg-green-500 font-bold rounded-2xl flex items-center p-5">
